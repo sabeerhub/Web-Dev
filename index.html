@@ -36,17 +36,17 @@
         <div class="light-orb light-2"></div>
     </div>
 
-    <nav class="nav-container">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
         <div class="nav-content liquid-glass-premium">
-            <div class="nav-logo">SABEER</div>
+            <div class="nav-logo" role="img" aria-label="Sabeer Logo">SABEER</div>
             <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link" aria-label="Go to about section">About</a>
+                <a href="#projects" class="nav-link" aria-label="Go to projects section">Projects</a>
+                <a href="#experience" class="nav-link" aria-label="Go to experience section">Experience</a>
+                <a href="#contact" class="nav-link" aria-label="Go to contact section">Contact</a>
             </div>
             <div class="nav-cta">
-                <a href="#contact" class="btn-primary">Get in touch</a>
+                <a href="#contact" class="btn-primary" aria-label="Get in touch with Sabeer">Get in touch</a>
             </div>
         </div>
     </nav>
@@ -66,8 +66,8 @@
                         Crafting premium digital experiences through motion, systems, and interface engineering.
                     </p>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn-primary">View Work</a>
-                        <a href="#contact" class="btn-secondary">Let's Talk</a>
+                        <a href="#projects" class="btn-primary" aria-label="View selected projects">View Work</a>
+                        <a href="#contact" class="btn-secondary" aria-label="Go to contact section">Let's Talk</a>
                     </div>
                 </div>
             </div>
@@ -304,24 +304,24 @@
                         <h2 class="section-title reveal-text">Let's create something extraordinary.</h2>
                         <p class="text-premium reveal-text">Currently available for select freelance opportunities and full-time senior roles.</p>
                         <div class="contact-socials">
-                            <a href="#" class="social-link">LinkedIn</a>
-                            <a href="#" class="social-link">GitHub</a>
-                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link" aria-label="Connect with Sabeer on LinkedIn">LinkedIn</a>
+                            <a href="#" class="social-link" aria-label="View Sabeer's code on GitHub">GitHub</a>
+                            <a href="#" class="social-link" aria-label="Follow Sabeer on Twitter">Twitter</a>
                         </div>
                     </div>
                     <div class="contact-form-container reveal-project">
                         <form class="contact-form liquid-glass-premium">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Your Name" class="form-input">
+                                <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="Your Email" class="form-input">
+                                <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" rows="5" placeholder="Your Message" class="form-input"></textarea>
+                                <textarea id="message" name="message" rows="5" placeholder="Your Message" class="form-input" required aria-required="true"></textarea>
                             </div>
                             <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
                         </form>

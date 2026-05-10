@@ -274,13 +274,15 @@ function initProjectsAnimations() {
     projectContainers.forEach(container => {
         container.addEventListener('mouseenter', () => {
             gsap.to(follower, {
-                width: 100,
-                height: 100,
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                border: '1px solid rgba(255, 255, 255, 0.5)',
-                duration: 0.5
+                width: 120,
+                height: 120,
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                border: '1px solid rgba(255, 255, 255, 0.6)',
+                backdropFilter: 'blur(10px)',
+                duration: 0.6,
+                ease: 'power3.out'
             });
-            follower.innerHTML = '<span style="font-size: 0.6rem; color: white; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">View</span>';
+            follower.innerHTML = '<span style="font-size: 0.7rem; color: white; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">Discover</span>';
             gsap.set(follower.querySelector('span'), {
                 display: 'flex',
                 alignItems: 'center',
@@ -356,15 +358,15 @@ function initAboutAnimations() {
         const split = new SplitType(text, { types: 'lines' });
 
         gsap.from(split.lines, {
-            y: 40,
+            y: 60,
             opacity: 0,
-            duration: 1,
+            rotateX: -20,
+            duration: 1.5,
             stagger: 0.1,
-            ease: 'power3.out',
+            ease: 'power4.out',
             scrollTrigger: {
                 trigger: text,
                 start: 'top 85%',
-                end: 'bottom 20%',
                 toggleActions: 'play none none reverse'
             }
         });
@@ -393,22 +395,25 @@ function initHeroAnimations() {
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
 
     tl.from(title.chars, {
-        y: 100,
+        y: 150,
         opacity: 0,
-        duration: 1.5,
-        stagger: 0.05,
+        rotateX: -90,
+        transformOrigin: 'top center',
+        duration: 2,
+        stagger: 0.04,
+        ease: 'expo.out'
     })
     .from('.hero-subtitle', {
-        y: 20,
+        y: 40,
         opacity: 0,
-        duration: 1,
-    }, '-=1')
+        duration: 1.5,
+    }, '-=1.5')
     .from(description.lines, {
-        y: 20,
+        y: 40,
         opacity: 0,
-        duration: 1,
+        duration: 1.2,
         stagger: 0.1,
-    }, '-=0.8')
+    }, '-=1.2')
     .from('.hero-actions .btn-primary, .hero-actions .btn-secondary', {
         y: 20,
         opacity: 0,
