@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initExpertiseInteraction();
     initMarquee();
     initCustomCursor();
+    initProjectModals();
 });
 
 /* 1. Smooth Scroll Engine (Lenis) */
@@ -59,7 +60,8 @@ function initPreloader() {
           duration: 1.2,
           ease: 'expo.inOut',
           delay: 0.5
-      });
+      })
+      .set('.product-loader', { display: 'none' });
 }
 
 /* 3. Hero Entrance Sequence */
@@ -71,31 +73,31 @@ function initEntranceSequence() {
     const heroDesc = new SplitType('.hero-description p', { types: 'lines' });
 
     tl.from('.nav-frame', {
-        y: -50,
+        y: -30,
         opacity: 0,
-        duration: 1.2,
+        duration: 2,
         ease: 'expo.out'
     })
     .from(heroTitle.words, {
-        y: 100,
+        y: 120,
         opacity: 0,
-        stagger: 0.02,
-        duration: 1.5,
+        stagger: 0.03,
+        duration: 2,
         ease: 'expo.out'
-    }, '-=0.8')
+    }, '-=1.5')
     .from('.hero-tag', {
-        scale: 0.8,
-        opacity: 0,
-        duration: 1,
-        ease: 'back.out(1.7)'
-    }, '-=1.2')
-    .from(heroDesc.lines, {
         y: 20,
         opacity: 0,
+        duration: 1.5,
+        ease: 'expo.out'
+    }, '-=1.8')
+    .from(heroDesc.lines, {
+        y: 30,
+        opacity: 0,
         stagger: 0.1,
-        duration: 1.2,
-        ease: 'power3.out'
-    }, '-=1')
+        duration: 1.5,
+        ease: 'expo.out'
+    }, '-=1.5')
     .from('.hero-scroll', {
         opacity: 0,
         y: 20,
@@ -139,33 +141,38 @@ function initSectionReveals() {
 
     sections.forEach(section => {
         const heading = section.querySelector('.label-heading');
-        const content = section.querySelectorAll('.editorial-h3, .p-large, .showcase-item, .exp-tile, .journal-item');
+        const content = section.querySelectorAll('.editorial-h3, .p-large, .showcase-item, .exp-tile, .journal-item, .connect-h2, .connect-form-frame');
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: 'top 80%',
+                start: 'top 85%',
                 toggleActions: 'play none none none'
             }
         });
 
         if (heading) {
-            tl.from(heading, { opacity: 0, x: -20, duration: 1 });
+            tl.from(heading, {
+                opacity: 0,
+                y: 20,
+                duration: 1.5,
+                ease: 'expo.out'
+            });
         }
 
         tl.from(content, {
             opacity: 0,
-            y: 40,
-            stagger: 0.1,
-            duration: 1.2,
+            y: 60,
+            stagger: 0.15,
+            duration: 2,
             ease: 'expo.out'
-        }, '-=0.5');
+        }, '-=1.2');
     });
 }
 
 /* 6. Physical Hover Effects */
 function initProductHover() {
-    if (window.innerWidth < 1024) return; // Disable physical tilt on mobile for better performance
+    if ('ontouchstart' in window || window.innerWidth < 1024) return; // Disable physical tilt on touch/mobile for better performance
 
     const items = document.querySelectorAll('.showcase-item');
 
@@ -287,7 +294,68 @@ function initCustomCursor() {
     });
 }
 
-/* 10. Hero Parallax */
+/* 10. Project Modal System */
+function initProjectModals() {
+    const modal = document.querySelector('#project-modal');
+    const triggers = document.querySelectorAll('.visual-hover');
+    const closeBtn = document.querySelector('.modal-close');
+
+    const projects = {
+        zero: {
+            title: "Zero Bank",
+            color: "linear-gradient(135deg, #0f0f0f, #000)",
+            desc: "Redefining the digital banking experience through an elite interface system."
+        },
+        nova: {
+            title: "Nova AI",
+            color: "linear-gradient(135deg, #1a1a1a, #0a0a0a)",
+            desc: "Harnessing artificial intelligence through a cinematic product experience."
+        },
+        flux: {
+            title: "Flux OS",
+            color: "linear-gradient(135deg, #222, #000)",
+            desc: "A high-performance SaaS operating system designed for precision."
+        }
+    };
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const pid = trigger.getAttribute('data-project');
+            const data = projects[pid];
+
+            // Update Modal Content
+            modal.querySelector('.modal-title').textContent = data.title;
+            modal.querySelector('.modal-visual-inner').style.background = data.color;
+
+            openModal();
+        });
+    });
+
+    function openModal() {
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+
+        gsap.timeline()
+            .fromTo('.modal-overlay', { opacity: 0 }, { opacity: 1, duration: 1, ease: 'power2.out' })
+            .fromTo('.modal-container', { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: 'expo.out' }, '-=0.8')
+            .from('.reveal-modal', { y: 30, opacity: 0, stagger: 0.1, duration: 1, ease: 'power3.out' }, '-=0.6');
+    }
+
+    function closeModal() {
+        gsap.timeline({
+            onComplete: () => {
+                modal.classList.remove('is-active');
+                document.body.style.overflow = '';
+            }
+        })
+        .to('.modal-container', { y: 50, opacity: 0, duration: 0.8, ease: 'power3.in' })
+        .to('.modal-overlay', { opacity: 0, duration: 0.6 }, '-=0.4');
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+}
+
+/* 11. Hero Parallax */
 function initHeroParallax() {
     gsap.to('.ls-1', {
         scrollTrigger: {

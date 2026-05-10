@@ -131,7 +131,7 @@
                             <div class="visual-inner bg-zero">
                                 <div class="mockup-label">ZERO BANK</div>
                             </div>
-                            <div class="visual-hover">
+                            <div class="visual-hover" data-project="zero">
                                 <span class="btn-circular">DISCOVER</span>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                             <div class="visual-inner bg-ai">
                                 <div class="mockup-label">NOVA AI</div>
                             </div>
-                            <div class="visual-hover">
+                            <div class="visual-hover" data-project="nova">
                                 <span class="btn-circular">DISCOVER</span>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                             <div class="visual-inner bg-flux">
                                 <div class="mockup-label">FLUX OS</div>
                             </div>
-                            <div class="visual-hover">
+                            <div class="visual-hover" data-project="flux">
                                 <span class="btn-circular">DISCOVER</span>
                             </div>
                         </div>
@@ -321,6 +321,42 @@
         </footer>
 
     </main>
+
+    <!-- Project Modal: Spatial Experience -->
+    <div id="project-modal" class="modal-interface" aria-hidden="true">
+        <div class="modal-overlay glass-optical"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close Project">
+                <span class="close-icon"></span>
+                <span class="close-glow"></span>
+            </button>
+            <div class="modal-scroll-frame">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <div class="modal-meta reveal-modal">
+                            <span class="modal-tag">SELECTED CASE STUDY</span>
+                            <h2 class="modal-title">Project Name</h2>
+                        </div>
+                    </header>
+                    <div class="modal-body reveal-modal">
+                        <div class="modal-hero-visual glass-optical">
+                            <div class="modal-visual-inner"></div>
+                        </div>
+                        <div class="modal-editorial">
+                            <div class="editorial-col">
+                                <h3>The Objective</h3>
+                                <p>Building a high-performance system designed for the next generation of fintech users.</p>
+                            </div>
+                            <div class="editorial-col">
+                                <h3>The Craft</h3>
+                                <p>Engineered using advanced motion systems and a refined design language focused on clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Core Logic -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
