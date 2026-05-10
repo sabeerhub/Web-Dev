@@ -165,6 +165,8 @@ function initSectionReveals() {
 
 /* 6. Physical Hover Effects */
 function initProductHover() {
+    if (window.innerWidth < 1024) return; // Disable physical tilt on mobile for better performance
+
     const items = document.querySelectorAll('.showcase-item');
 
     items.forEach(item => {
