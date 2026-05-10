@@ -3,292 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabeer | Frontend Engineer & Creative Developer</title>
-    <meta name="description" content="Portfolio of Sabeer, a world-class Frontend Engineer and Creative Developer specializing in premium digital experiences.">
+    <title>Sabeer — Elite Frontend Engineer & Creative Developer</title>
+    <meta name="description" content="Sabeer is a senior creative developer crafting world-class digital experiences with Apple-caliber precision and cinematic motion.">
 
-    <!-- Fonts -->
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="loader">
-        <div class="loader-content">
+<body class="is-loading">
+
+    <!-- Cinematic Loader -->
+    <div class="loader" aria-hidden="true">
+        <div class="loader-inner">
             <div class="loader-logo">SABEER</div>
-            <div class="loader-bar-container">
+            <div class="loader-progress">
                 <div class="loader-bar"></div>
             </div>
         </div>
     </div>
 
-    <div class="noise"></div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-follower"></div>
-    <div class="cursor-dot"></div>
-
-    <!-- Background Lighting -->
-    <div class="bg-lighting">
-        <div class="light-orb light-1"></div>
-        <div class="light-orb light-2"></div>
+    <!-- Background Layers -->
+    <div class="viewport-bg">
+        <div class="noise-overlay"></div>
+        <div class="lighting-system">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
     </div>
 
-    <nav class="nav-container" role="navigation" aria-label="Main navigation">
-        <div class="nav-content liquid-glass-premium">
-            <div class="nav-logo" role="img" aria-label="Sabeer Logo">SABEER</div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link" aria-label="Go to about section">About</a>
-                <a href="#projects" class="nav-link" aria-label="Go to projects section">Projects</a>
-                <a href="#experience" class="nav-link" aria-label="Go to experience section">Experience</a>
-                <a href="#contact" class="nav-link" aria-label="Go to contact section">Contact</a>
+    <!-- Custom Physical Cursor -->
+    <div class="cursor-system">
+        <div class="cursor-dot"></div>
+        <div class="cursor-aura"></div>
+    </div>
+
+    <!-- Premium Navigation -->
+    <nav class="glass-nav" role="navigation">
+        <div class="nav-wrapper">
+            <div class="nav-brand">SABEER</div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Works</a>
+                <a href="#experience" class="nav-item">Journal</a>
+                <a href="#contact" class="nav-item">Connect</a>
             </div>
-            <div class="nav-cta">
-                <a href="#contact" class="btn-primary" aria-label="Get in touch with Sabeer">Get in touch</a>
+            <div class="nav-action">
+                <a href="#contact" class="btn-magnetic btn-glass">Inquiry</a>
             </div>
         </div>
     </nav>
 
-    <div id="app">
-        <!-- Hero Section -->
-        <section class="hero-section flex-center" id="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title text-cinematic">SABEER</h1>
-                    <div class="hero-subtitle-container">
-                        <p class="hero-subtitle text-premium">
-                            Frontend Engineer • Creative Developer • Product Builder
+    <!-- Main Content Wrapper (Lenis Smooth Scroll) -->
+    <main id="main-content">
+
+        <!-- 1. Hero: Cinematic Command -->
+        <section id="hero" class="hero-wrap">
+            <div class="hero-container">
+                <div class="hero-top">
+                    <span class="hero-badge">Available for 2024 Projects</span>
+                </div>
+                <div class="hero-main">
+                    <h1 class="hero-heading text-reveal">
+                        <span class="line">ENGINEERING</span>
+                        <span class="line text-indent">EMOTION</span>
+                    </h1>
+                </div>
+                <div class="hero-bottom">
+                    <div class="hero-meta">
+                        <p class="hero-role">Senior Creative Developer</p>
+                        <p class="hero-specialty">Interface & Interaction</p>
+                    </div>
+                    <div class="hero-scroll-prompt">
+                        <div class="scroll-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About: Editorial Storytelling -->
+        <section id="about" class="about-wrap section-padding">
+            <div class="container">
+                <div class="editorial-grid">
+                    <div class="editorial-left">
+                        <h2 class="section-label">Philosophy</h2>
+                        <h3 class="editorial-heading split-text">Building products that feel physical, not just digital.</h3>
+                    </div>
+                    <div class="editorial-right">
+                        <p class="editorial-para reveal-text">
+                            I specialize in the delicate space between design and engineering. My work is defined by restraint, precision, and an obsession with how pixels move.
                         </p>
-                    </div>
-                    <p class="hero-description text-premium">
-                        Crafting premium digital experiences through motion, systems, and interface engineering.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn-primary" aria-label="View selected projects">View Work</a>
-                        <a href="#contact" class="btn-secondary" aria-label="Go to contact section">Let's Talk</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-indicator">
-                <div class="scroll-dot"></div>
-                <span>Scroll to explore</span>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section section" id="about">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2 class="section-title reveal-text">Architecting Digital Elegance.</h2>
-                        <p class="text-premium reveal-text">
-                            I am a specialized frontend engineer focused on the intersection of design and engineering. I build high-end digital products that feel physical, cinematic, and precise.
-                        </p>
-                        <p class="text-premium reveal-text" style="margin-top: 1.5rem;">
-                            My philosophy is rooted in Apple's principles of restraint and clarity, combined with Vercel's engineering excellence. I believe every interaction should be an intentional part of a larger, harmonious system.
-                        </p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item liquid-glass-premium">
-                            <span class="stat-number">08+</span>
-                            <span class="stat-label">Years of Experience</span>
-                        </div>
-                        <div class="stat-item liquid-glass-premium">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Premium Projects</span>
-                        </div>
-                        <div class="stat-item liquid-glass-premium">
-                            <span class="stat-number">12</span>
-                            <span class="stat-label">Industry Awards</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="experience-section section" id="experience">
-            <div class="container">
-                <h2 class="section-title reveal-text">Journey.</h2>
-                <div class="timeline">
-                    <div class="timeline-line"></div>
-                    <div class="timeline-item reveal-timeline">
-                        <div class="timeline-date">2021 — PRESENT</div>
-                        <div class="timeline-content liquid-glass-premium">
-                            <h3 class="timeline-title">Senior Creative Developer</h3>
-                            <p class="timeline-company">Vercel (Remote)</p>
-                            <p class="timeline-desc">Leading the development of high-performance marketing sites and interactive product showcases.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal-timeline">
-                        <div class="timeline-date">2019 — 2021</div>
-                        <div class="timeline-content liquid-glass-premium">
-                            <h3 class="timeline-title">Frontend Engineer</h3>
-                            <p class="timeline-company">Stripe (San Francisco)</p>
-                            <p class="timeline-desc">Engineered robust dashboard components and optimized payment flow performance.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal-timeline">
-                        <div class="timeline-date">2017 — 2019</div>
-                        <div class="timeline-content liquid-glass-premium">
-                            <h3 class="timeline-title">UI/UX Developer</h3>
-                            <p class="timeline-company">Apple (Cupertino)</p>
-                            <p class="timeline-desc">Collaborated on internal design systems and high-fidelity prototyping for iOS apps.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects-section section" id="projects">
-            <div class="container">
-                <h2 class="section-title reveal-text">Selected Works.</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card reveal-project">
-                        <div class="project-image-container liquid-glass">
-                            <div class="project-image" style="background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);">
-                                <div class="project-mockup">ZERO BANK</div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-val">08</span>
+                                <span class="metric-key">Years of Craft</span>
                             </div>
-                            <div class="project-overlay flex-center">
-                                <a href="#" class="btn-primary">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Zero Bank</h3>
-                            <p class="project-category">Fintech • UI System</p>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card reveal-project">
-                        <div class="project-image-container liquid-glass">
-                            <div class="project-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);">
-                                <div class="project-mockup">AI PLATFORM</div>
-                            </div>
-                            <div class="project-overlay flex-center">
-                                <a href="#" class="btn-primary">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Nova AI</h3>
-                            <p class="project-category">AI • Interface Engineering</p>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="project-card reveal-project">
-                        <div class="project-image-container liquid-glass">
-                            <div class="project-image" style="background: linear-gradient(135deg, #2a2a2a 0%, #111 100%);">
-                                <div class="project-mockup">SAAS DASHBOARD</div>
-                            </div>
-                            <div class="project-overlay flex-center">
-                                <a href="#" class="btn-primary">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Flux OS</h3>
-                            <p class="project-category">SaaS • Dashboard System</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills-section section" id="skills">
-            <div class="container">
-                <h2 class="section-title reveal-text">Expertise.</h2>
-                <div class="skills-grid">
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9m3 4H5m12 4h-4M6 12l-3 3 3 3"></path></svg>
-                        </div>
-                        <h3 class="skill-title">Frontend Engineering</h3>
-                        <p class="skill-desc">Building scalable, performant, and accessible web architectures.</p>
-                    </div>
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20m10-10H2"></path></svg>
-                        </div>
-                        <h3 class="skill-title">Animation Engineering</h3>
-                        <p class="skill-desc">Crafting high-end motion systems and cinematic interactions.</p>
-                    </div>
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                        </div>
-                        <h3 class="skill-title">UI Systems</h3>
-                        <p class="skill-desc">Designing and implementing robust, reusable design systems.</p>
-                    </div>
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                        </div>
-                        <h3 class="skill-title">Product Design</h3>
-                        <p class="skill-desc">Focusing on user experience, aesthetic harmony, and physical realism.</p>
-                    </div>
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                        </div>
-                        <h3 class="skill-title">System Design</h3>
-                        <p class="skill-desc">Architecting complex applications with modularity and scalability.</p>
-                    </div>
-                    <div class="skill-card liquid-glass-premium">
-                        <div class="skill-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                        </div>
-                        <h3 class="skill-title">Performance</h3>
-                        <p class="skill-desc">Optimizing for 60fps, fast load times, and efficient resource usage.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section section" id="testimonials">
-            <div class="container">
-                <h2 class="section-title reveal-text">Kind Words.</h2>
-                <div class="testimonials-marquee">
-                    <div class="marquee-content">
-                        <!-- Duplicate for infinite effect -->
-                        <div class="testimonial-card liquid-glass-premium">
-                            <p class="testimonial-text">"Sabeer's attention to detail and motion design is unparalleled. He transformed our vision into a cinematic reality."</p>
-                            <div class="testimonial-author">
-                                <span class="author-name">Alex Rivera</span>
-                                <span class="author-role">Design Director, Linear</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-card liquid-glass-premium">
-                            <p class="testimonial-text">"An elite frontend engineer who understands product design deeply. A rare talent in the creative development space."</p>
-                            <div class="testimonial-author">
-                                <span class="author-name">Sarah Chen</span>
-                                <span class="author-role">Founder, Nova AI</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-card liquid-glass-premium">
-                            <p class="testimonial-text">"Working with Sabeer was a masterclass in engineering excellence. His code is as elegant as his designs."</p>
-                            <div class="testimonial-author">
-                                <span class="author-name">Marcus Thorne</span>
-                                <span class="author-role">VP Engineering, Zero Bank</span>
-                            </div>
-                        </div>
-                        <!-- Duplicates -->
-                        <div class="testimonial-card liquid-glass-premium">
-                            <p class="testimonial-text">"Sabeer's attention to detail and motion design is unparalleled. He transformed our vision into a cinematic reality."</p>
-                            <div class="testimonial-author">
-                                <span class="author-name">Alex Rivera</span>
-                                <span class="author-role">Design Director, Linear</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-card liquid-glass-premium">
-                            <p class="testimonial-text">"An elite frontend engineer who understands product design deeply. A rare talent in the creative development space."</p>
-                            <div class="testimonial-author">
-                                <span class="author-name">Sarah Chen</span>
-                                <span class="author-role">Founder, Nova AI</span>
+                            <div class="metric-item">
+                                <span class="metric-val">12+</span>
+                                <span class="metric-key">Global Awards</span>
                             </div>
                         </div>
                     </div>
@@ -296,51 +112,214 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section section" id="contact">
+        <!-- 3. Projects: Product Showcases -->
+        <section id="projects" class="projects-wrap section-padding">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2 class="section-title reveal-text">Let's create something extraordinary.</h2>
-                        <p class="text-premium reveal-text">Currently available for select freelance opportunities and full-time senior roles.</p>
-                        <div class="contact-socials">
-                            <a href="#" class="social-link" aria-label="Connect with Sabeer on LinkedIn">LinkedIn</a>
-                            <a href="#" class="social-link" aria-label="View Sabeer's code on GitHub">GitHub</a>
-                            <a href="#" class="social-link" aria-label="Follow Sabeer on Twitter">Twitter</a>
+                <header class="section-header">
+                    <h2 class="section-title">Selected Works</h2>
+                    <p class="section-desc">A curation of projects focused on performance and aesthetic harmony.</p>
+                </header>
+
+                <div class="work-grid">
+                    <!-- Project 1: Zero Bank -->
+                    <article class="work-item" data-speed="0.1">
+                        <div class="work-link">
+                            <div class="work-visual glass-material">
+                                <div class="work-image-inner bg-zero">
+                                    <span class="work-mockup-text">ZERO</span>
+                                </div>
+                                <div class="work-overlay">
+                                    <span class="btn-circular">View Case</span>
+                                </div>
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-name">Zero Bank</h4>
+                                <p class="work-tags">Fintech • UI System</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: AI Platform -->
+                    <article class="work-item" data-speed="0.2">
+                        <div class="work-link">
+                            <div class="work-visual glass-material">
+                                <div class="work-image-inner bg-ai">
+                                    <span class="work-mockup-text">NOVA</span>
+                                </div>
+                                <div class="work-overlay">
+                                    <span class="btn-circular">View Case</span>
+                                </div>
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-name">Nova AI</h4>
+                                <p class="work-tags">Intelligence • Interface</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Dashboard -->
+                    <article class="work-item" data-speed="0.05">
+                        <div class="work-link">
+                            <div class="work-visual glass-material">
+                                <div class="work-image-inner bg-dashboard">
+                                    <span class="work-mockup-text">FLUX</span>
+                                </div>
+                                <div class="work-overlay">
+                                    <span class="btn-circular">View Case</span>
+                                </div>
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-name">Flux OS</h4>
+                                <p class="work-tags">SaaS • Design System</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skills: Expertise Modules -->
+        <section id="skills" class="skills-wrap section-padding">
+            <div class="container">
+                <div class="skills-layout">
+                    <div class="skills-header">
+                        <h2 class="section-title">Core Expertise</h2>
+                    </div>
+                    <div class="skills-grid-bento">
+                        <div class="skill-tile glass-material">
+                            <h5 class="skill-cat">Architecture</h5>
+                            <p class="skill-item">Frontend Engineering</p>
+                            <p class="skill-item">System Design</p>
+                        </div>
+                        <div class="skill-tile glass-material highlight">
+                            <h5 class="skill-cat">Experience</h5>
+                            <p class="skill-item">Animation Engineering</p>
+                            <p class="skill-item">Interaction Design</p>
+                        </div>
+                        <div class="skill-tile glass-material">
+                            <h5 class="skill-cat">Product</h5>
+                            <p class="skill-item">UI Systems</p>
+                            <p class="skill-item">Performance Strategy</p>
                         </div>
                     </div>
-                    <div class="contact-form-container reveal-project">
-                        <form class="contact-form liquid-glass-premium">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required aria-required="true">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Experience: Cinematic Journal -->
+        <section id="experience" class="experience-wrap section-padding">
+            <div class="container">
+                <div class="experience-layout">
+                    <div class="experience-header">
+                        <h2 class="section-title">The Journey</h2>
+                    </div>
+                    <div class="experience-list">
+                        <div class="exp-item reveal-item">
+                            <div class="exp-time">2021 — PRESENT</div>
+                            <div class="exp-main">
+                                <h4 class="exp-title">Senior Creative Developer</h4>
+                                <p class="exp-org">Vercel</p>
+                                <p class="exp-summary">Orchestrating premium digital interfaces and interactive narratives for the next generation of the web.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required aria-required="true">
+                        </div>
+                        <div class="exp-item reveal-item">
+                            <div class="exp-time">2019 — 2021</div>
+                            <div class="exp-main">
+                                <h4 class="exp-title">Frontend Engineer</h4>
+                                <p class="exp-org">Stripe</p>
+                                <p class="exp-summary">Engineered high-fidelity financial dashboards and optimized design-to-code workflows.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Your Message" class="form-input" required aria-required="true"></textarea>
+                        </div>
+                        <div class="exp-item reveal-item">
+                            <div class="exp-time">2017 — 2019</div>
+                            <div class="exp-main">
+                                <h4 class="exp-title">UI Developer</h4>
+                                <p class="exp-org">Apple</p>
+                                <p class="exp-summary">Collaborated on internal systems and accessibility initiatives across digital touchpoints.</p>
                             </div>
-                            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Testimonials: Proof -->
+        <section id="testimonials" class="testimonials-wrap section-padding">
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <div class="testimonial-box glass-material">
+                        <p class="quote">“Sabeer redefined our product's soul.”</p>
+                        <cite>Alex Rivera — Design Director, Linear</cite>
+                    </div>
+                    <div class="testimonial-box glass-material">
+                        <p class="quote">“The most precise engineer I've worked with.”</p>
+                        <cite>Sarah Chen — Founder, Nova AI</cite>
+                    </div>
+                    <div class="testimonial-box glass-material">
+                        <p class="quote">“Art and engineering in perfect harmony.”</p>
+                        <cite>Marcus Thorne — VP Eng, Zero Bank</cite>
+                    </div>
+                    <!-- Clones -->
+                    <div class="testimonial-box glass-material">
+                        <p class="quote">“Sabeer redefined our product's soul.”</p>
+                        <cite>Alex Rivera — Design Director, Linear</cite>
+                    </div>
+                    <div class="testimonial-box glass-material">
+                        <p class="quote">“The most precise engineer I've worked with.”</p>
+                        <cite>Sarah Chen — Founder, Nova AI</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact: Direct Connect -->
+        <section id="contact" class="contact-wrap section-padding">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-header">
+                        <h2 class="contact-heading">Let's craft the <br><span class="text-italic">extraordinary.</span></h2>
+                        <div class="contact-links">
+                            <a href="#" class="link-item underline">LinkedIn</a>
+                            <a href="#" class="link-item underline">GitHub</a>
+                            <a href="#" class="link-item underline">Twitter</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrap glass-material">
+                        <form class="premium-form">
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>Name</label>
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="hello@company.com" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Message</label>
+                                <textarea rows="4" placeholder="Tell me about your project"></textarea>
+                            </div>
+                            <button type="submit" class="btn-magnetic btn-solid">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer section">
+        <!-- Footer -->
+        <footer class="footer-wrap">
             <div class="container">
-                <div class="footer-content">
-                    <div class="nav-logo">SABEER</div>
-                    <p class="footer-text">© 2023 Built with passion & precision.</p>
+                <div class="footer-inner">
+                    <span class="copyright">© 2024 Sabeer. Engineered for Excellence.</span>
+                    <span class="timezone">Current Time: 12:45 PM GMT+5</span>
                 </div>
             </div>
         </footer>
-    </div>
 
-    <!-- Scripts -->
+    </main>
+
+    <!-- Essential Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
